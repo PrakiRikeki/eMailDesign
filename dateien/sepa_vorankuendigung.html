@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ribeka SEPA-Lastschriftankündigung</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Der Style-Block ist jetzt leer, da alle CSS-Regeln inline sind. -->
+    <style type="text/css">
+        /* Alle CSS-Regeln wurden in die HTML-Elemente verschoben. */
+        /* Beachten Sie, dass Media Queries (für Responsivität) hier nicht inlined werden können und daher verloren gehen. */
+    </style>
+</head>
+<body style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; background-color: #f8fafc; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+
+    <!-- Äußere Tabelle für den Hintergrund und Zentrierung -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f8fafc; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            <td align="center" valign="top" style="padding: 48px 24px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;"> <!-- Größeres äußeres Padding -->
+
+                <!-- Haupt-E-Mail-Container (weiß) -->
+                <table width="90%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; max-width: 700px; background-color: #ffffff; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); overflow: hidden; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tr>
+                        <td style="padding: 0; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+
+                            <!-- Header innerhalb der E-Mail (Top-Banner) -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #e0f2fe; border-radius: 24px 24px 0 0; padding: 32px; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td align="center" style="font-family: 'Inter', Arial, sans-serif; padding: 32px;">
+                                        <img src="https://www.ribeka.com/wp-content/uploads/2020/02/ribeka_logo_300x138.png" alt="ribeka Logo" width="150" height="auto" style="display: block; border: 0; margin: 0 auto 16px auto; max-width: 100%; line-height: 100%; outline: none; text-decoration: none;">
+                                        <h1 style="font-size: 28px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0;">Ihre SEPA-Lastschriftankündigung</h1>
+                                        <p style="margin: 0; font-size: 18px; color: #475569; padding-bottom: 0px;">Informationen zu Ihrer anstehenden Abbuchung.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Inhalt: Begrüßung und Lastschrift-Details -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            {{tn.briefanrede}},<br>
+                                            den Rechnungsbetrag in Höhe von <strong>{{zahlung.betrag}}</strong> ziehen wir per SEPA-Lastschrift mit der Mandatsreferenz <strong>{{zahlung.mandatsReferenz}}</strong> zu der Gläubiger-Identifikationsnummer <strong>{{zahlung.glaeubigerId}}</strong> vom Konto dessen IBAN auf <strong>{{zahlung.ibanLetzte4Stellen}}</strong> endet am <strong>{{zahlung.einzugsDatum}}</strong> oder kurz danach ein.
+                                            Wir bitten Sie, für ausreichende Kontodeckung zu sorgen.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Call to Action Button (optional für Rückfragen) -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td align="center" style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <a href="https://www.ribeka.com/kontakt" style="display: inline-block; padding: 16px 32px; font-size: 18px; font-weight: 700; color: #ffffff; background-color: #00aeef; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 12px rgba(0, 174, 239, 0.2);">
+                                            Kontaktieren Sie uns bei Fragen
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Inhalt: Allgemeine Hinweise -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
+                                            {{port.eMailHinweise}:html}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Der "Mit freundlichen Grüßen"-Block wurde hier entfernt, wie gewünscht. -->
+
+                            <!-- Footer -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #2c3e50; color: #cbd5e1; font-size: 14px; padding: 20px; border-radius: 0 0 24px 24px; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td align="center" style="font-family: 'Inter', Arial, sans-serif; padding: 20px;">
+                                        <!-- Links im Footer (Website, Kontakt) -->
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto 24px auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/schild-schulsoftware/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        Website
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/impressum/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        Impressum
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/agb/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        AGB
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/datenschutz/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        Datenschutz
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/kontakt" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        Kontakt
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                                    <a href="https://www.ribeka.com/anfahrt/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                        Anfahrt
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <p style="margin: 0; padding: 0;">ribeka GmbH<br>Johann-Philipp-Reis-Straße 9<br>53332 Bornheim</p>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+                <!-- Ende Haupt-E-Mail-Container -->
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
