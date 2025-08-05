@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ribeka Anmeldebestätigung</title>
+    <title>ribeka Ihre Buchungsbestätigung</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,13 +39,21 @@
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Anmeldebestätigung -->
+                            <!-- Inhalt: Begrüßung und Buchungsdetails -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
                                             {{tn.briefanrede}},<br>
-                                            vielen Dank für Ihre Anmeldung zu unserer Software-Schulung. Hiermit bestätigen wir Ihre Teilnahme an folgender Schulung:
+                                            vielen Dank für die Buchung von:
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
+                                            <strong>Schulung:</strong>
+                                            <a href="{{sm.url}}" target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>{{sm.url}:collapseEmpty}
+                                            {{sm.matchcode}}{{sm.url}:collapseNonEmpty}
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            <strong>Zeitraum:</strong> {{sm.zeitraum}}
                                         </p>
                                     </td>
                                 </tr>
@@ -60,21 +68,29 @@
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Veranstaltungsdetails -->
+                            <!-- Inhalt: Online-Besprechungslinks und Hinweise -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 0; padding-bottom: 12px;">Ihre Software-Schulung im Überblick</h3>
+                                        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 0; padding-bottom: 12px;">Wichtige Links und Hinweise</h3>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
-                                            <strong>Schulung:</strong> {{sm.titel}}<br>
-                                            <strong>Zeitraum:</strong> {{sm.zeitraum}}<br>
-                                            <strong>Ort:</strong> <span id="event-location-text">{{sm.texte.seminarort}}</span>
+                                            <a href="{{sm.teamsUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der Teams-Besprechung teilzunehmen.</a>
+                                        </p>{{sm.teamsUrl}:collapseEmpty}
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            <a href="{{sm.zoomUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der Zoom-Besprechung teilzunehmen.</a>
+                                        </p>{{sm.zoomUrl}:collapseEmpty}
+
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; padding-bottom: 16px;">
+                                            {{port.anmeldebestaetigungHinweise}:html}
                                         </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
+                                            {{port.erweiterteAnmeldebestaetigung}:html}
+                                        </p>{{port.erweiterteAnmeldebestaetigung}:collapseEmpty}
                                     </td>
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Call to Action Button -->
+                            <!-- Call to Action Button -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td align="center" style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
@@ -85,25 +101,23 @@
                                 </tr>
                             </table>
 
-                            <!-- Trennlinie -->
+                            <!-- Inhalt: Anhänge als Links und allgemeine Hinweise -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
-                                    <td style="padding: 0 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                        <div style="width: 100%; height: 1px; background-color: #e2e8f0;"></div>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Inhalt: Erweiterte Anmeldebestätigung -->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                                <tr>
-                                    <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
-                                            {{port.erweiterteAnmeldebestaetigung}:html}
+                                    <td style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <!-- Hinweis: Die Styles für .anhaenge ul/li müssten vom System inline gesetzt werden,
+                                            da externe Style-Blöcke in E-Mails oft ignoriert werden. -->
+                                        <div class="anhaenge" style="margin-top: 24px; margin-bottom: 24px;">
+                                            {{anhaengeAlsLinks}:html}
+                                        </div>{{anhaengeAlsLinks}:collapseEmpty}
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; padding-top: 16px;">
+                                            {{port.eMailHinweise}:html}
                                         </p>
                                     </td>
                                 </tr>
                             </table>
+
+                            <!-- Der "Mit freundlichen Grüßen"-Block wurde hier entfernt, wie gewünscht. -->
 
                             <!-- Footer -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #2c3e50; color: #cbd5e1; font-size: 14px; padding: 20px; border-radius: 0 0 24px 24px; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
