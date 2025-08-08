@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ribeka Neue Dateien zur Veranstaltung</title>
+    <title>ribeka Ihre Einladung</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,27 +33,22 @@
                                 <tr>
                                     <td align="center" style="font-family: 'Inter', Arial, sans-serif; padding: 32px;">
                                         <img src="https://www.ribeka.com/wp-content/uploads/2020/02/ribeka_logo_300x138.png" alt="ribeka Logo" width="150" height="auto" style="display: block; border: 0; margin: 0 auto 16px auto; max-width: 100%; line-height: 100%; outline: none; text-decoration: none;">
-                                        <h1 style="font-size: 28px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0;">Neue Dateien für Ihre Veranstaltung!</h1>
-                                        <p style="margin: 0; font-size: 18px; color: #475569; padding-bottom: 0px;">Wichtige Dokumente zu Ihrer Teilnahme.</p>
+                                        <h1 style="font-size: 28px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0;">Sie wurden eingeladen!</h1>
+                                        <p style="margin: 0; font-size: 18px; color: #475569; padding-bottom: 0px;">Akzeptieren Sie jetzt Ihre Einladung von {{sys.mandant.bezeichnung}}.</p>
                                     </td>
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Begrüßung und Hinweis auf Dateien -->
+                            <!-- Inhalt: Begrüßung und Einladungshinweis -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
-                                            {{tn.briefanrede}},<br>
-                                            zu Ihrer Teilnahme an
+                                            {{hka.briefanrede}},<br>
+                                            Du wurdest von <strong>{{sys.mandant.bezeichnung}}</strong> eingeladen.
                                         </p>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
-                                            <strong>Veranstaltung:</strong>
-                                            <a href="{{sm.url}}" target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>{{sm.url}:collapseEmpty}
-                                            {{sm.matchcode}}{{sm.url}:collapseNonEmpty}
-                                        </p>
-                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0;">
-                                            wurden neue Dateien freigegeben. Sie finden diese im Anhang dieser E-Mail.
+                                            Um die Einladung zu akzeptieren, klicke bitte auf den folgenden Button:
                                         </p>
                                     </td>
                                 </tr>
@@ -63,30 +58,39 @@
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td align="center" style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                        <a href="{{sm.url}}" style="display: inline-block; padding: 16px 32px; font-size: 18px; font-weight: 700; color: #ffffff; background-color: #00aeef; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 12px rgba(0, 174, 239, 0.2);">
-                                            Zur Veranstaltungsseite
+                                        <a href="{{Link}}" style="display: inline-block; padding: 16px 32px; font-size: 18px; font-weight: 700; color: #ffffff; background-color: #00aeef; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 12px rgba(0, 174, 239, 0.2);">
+                                            Einladung annehmen
                                         </a>
                                     </td>
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Anhänge als Links und Hinweise -->
+                            <!-- Inhalt: Gültigkeitshinweis und Ignorierhinweis -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                        <!-- Hinweis: Die Styles für .anhaenge ul/li müssten vom System inline gesetzt werden,
-                                            da externe Style-Blöcke in E-Mails oft ignoriert werden. -->
-                                        <div class="anhaenge" style="margin-top: 24px; margin-bottom: 24px;">
-                                            {{anhaengeAlsLinks}:html}
-                                        </div>{{anhaengeAlsLinks}:collapseEmpty}
-                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; padding-top: 16px;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
+                                            Dieser Link ist <strong>{{TokenLifetime}} Stunden</strong> lang gültig.
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0;">
+                                            Falls du keine Einladung von {{sys.mandant.bezeichnung}} erwartest, dann ignoriere diese E-Mail bitte.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Inhalt: Allgemeine Hinweise -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
                                             {{port.eMailHinweise}:html}
                                         </p>
                                     </td>
                                 </tr>
                             </table>
 
-                                                        <!-- Signatur Sektion (angepasst an das Design der E-Mail) -->
+                            <!-- Signatur Sektion (angepasst an das Design der E-Mail) -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6; background-color: #ffffff;">
@@ -162,7 +166,7 @@
                                                     </a>
                                                 </td>
                                                 <td style="padding: 0 12px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
-                                                    <a href="https://maps.app.goo.gl/wX3B38AS73DgUjeg7" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+                                                    <a href="https://www.ribeka.com/anfahrt/" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
                                                         Anfahrt
                                                     </a>
                                                 </td>
