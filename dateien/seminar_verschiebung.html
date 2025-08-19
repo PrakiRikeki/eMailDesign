@@ -49,8 +49,7 @@
                                         </p>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
                                             <strong>Veranstaltung:</strong>
-                                            <a href="{{sm.url}}" target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>{{sm.url}:collapseEmpty}
-                                            {{sm.matchcode}}{{sm.url}:collapseNonEmpty}
+                                            <a target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>
                                         </p>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
                                             wurde auf <strong>{{sm.zeitraum}}</strong> verschoben.
@@ -74,11 +73,8 @@
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
                                         <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 0; padding-bottom: 12px;">Wichtige Links und Hinweise</h3>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
-                                            <a href="{{sm.teamsUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der Teams-Besprechung teilzunehmen.</a>
+                                            <a href="{{sm.teamsUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der ribeka-Veranstaltung teilzunehmen</a>
                                         </p>{{sm.teamsUrl}:collapseEmpty}
-                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
-                                            <a href="{{sm.zoomUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der Zoom-Besprechung teilzunehmen.</a>
-                                        </p>{{sm.zoomUrl}:collapseEmpty}
 
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
                                             {{port.anmeldebestaetigungHinweise}:html}
