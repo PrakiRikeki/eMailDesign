@@ -44,16 +44,18 @@
                                 <tr>
                                     <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
-                                            {{tn.briefanrede}},<br>
-                                            wir möchten Sie an Ihre bevorstehende Veranstaltung erinnern:
+                                            {{tn.briefanrede}},<br><br>
+                                            wir möchten Sie an Ihre bevorstehende Veranstaltung erinnern:<br>
                                         </p>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
                                             <strong>Veranstaltung:</strong>
-                                            <a href="{{sm.url}}" target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>{{sm.url}:collapseEmpty}
-                                            {{sm.matchcode}}{{sm.url}:collapseNonEmpty}
+                                            <a target="_blank" style="color: #475569; text-decoration: underline;">{{sm.matchcode}}</a>
                                         </p>
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
-                                            <strong>Termin:</strong> Ihre verbindlich gebuchte Veranstaltung findet am <strong>{{sm.zeitraum}}</strong> statt.
+                                            <strong>Zeitraum:</strong> {{sm.zeitraum}}
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            Wir freuen uns auf Sie!
                                         </p>
                                     </td>
                                 </tr>
@@ -69,10 +71,15 @@
                             </table>
 
                             <!-- Teilnahme-Link -->
-                            <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
-                                <a href="{{sm.teamsUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der ribeka-Veranstaltung teilzunehmen</a>
-                            </p>{{sm.teamsUrl}:collapseEmpty}
-
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 0 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
+                                            <a href="{{sm.teamsUrl}}" target="_blank" style="color: #00aeef; text-decoration: underline;">Hier klicken, um an der ribeka-Veranstaltung teilzunehmen</a>
+                                        </p>{{sm.teamsUrl}:collapseEmpty}
+                                    </td>
+                                </tr>
+                            </table>
 
                             <!-- Inhalt: Zusätzliche Hinweise und Erinnerungen -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
