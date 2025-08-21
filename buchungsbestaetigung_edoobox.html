@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ribeka Ihre Rechnung</title>
+    <title>Information zu Ihrem Schulungstermin – neues Buchungssystem</title> <!-- Neuer Betreff -->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,22 +33,96 @@
                                 <tr>
                                     <td align="center" style="font-family: 'Inter', Arial, sans-serif; padding: 32px;">
                                         <img src="https://www.ribeka.com/wp-content/uploads/2020/02/ribeka_logo_300x138.png" alt="ribeka Logo" width="150" height="auto" style="display: block; border: 0; margin: 0 auto 16px auto; max-width: 100%; line-height: 100%; outline: none; text-decoration: none;">
-                                        <h1 style="font-size: 28px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0;">Ihre Rechnung ist da!</h1>
-                                        <p style="margin: 0; font-size: 18px; color: #475569; padding-bottom: 0px;">Details zu Ihrer Zahlung</p>
+                                        <h1 style="font-size: 28px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0;">Information zu Ihrem Schulungstermin</h1> <!-- Angepasste Überschrift -->
+                                        <p style="margin: 0; font-size: 18px; color: #475569; padding-bottom: 0px;">Wichtige Systemumstellung bei ribeka – Ihre Buchung bleibt gültig!</p> <!-- Angepasster Untertitel -->
                                     </td>
                                 </tr>
                             </table>
 
-                            <!-- Inhalt: Begrüßung und Rechnungsinfo -->
+                            <!-- Inhalt: Begrüßung und Buchungsdetails -->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
-                                    <td style="padding: 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                    <td style="padding-left: 32px; padding-right: 32px; padding-top: 40px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
                                         <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
                                             {{tn.briefanrede}},<br><br>
-                                            als Anlage senden wir Ihnen unsere Rechnung.<br><br>
-                                            Mit freundlichen Grüßen aus Bornheim<br>
-                                            Ihr Team der ribeka GmbH
+                                            wir möchten Sie darüber informieren, dass wir unser <strong>Buchungssystem für das ribeka Schulungszentrum</strong> auf eine neue Plattform umgestellt haben. Ihre bereits gebuchte Schulung wurde von uns selbstverständlich in das neue System übernommen.<br><br>
                                         </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
+                                            <strong>Für Sie ändert sich dadurch nichts:</strong>
+                                        </p>
+                                        <ul style="margin: 0; padding: 0 0 0 20px; font-size: 16px; color: #475569; list-style-type: disc;">
+                                            <li style="margin-bottom: 5px;">Ihre gebuchte Schulung bleibt unverändert bestehen.</li>
+                                            <li style="margin-bottom: 5px;">Alle Details zu Termin, Inhalt und Ablauf bleiben gültig.</li>
+                                            <li>Ihre Buchung ist weiterhin verbindlich.</li>
+                                        </ul>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-top: 16px;">
+                                            <!-- Leerer Absatz für zusätzlichen vertikalen Abstand, kann angepasst oder entfernt werden, wenn padding am TD ausreicht -->
+                                            &nbsp;
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <!-- Trennlinie -->
+                                <tr>
+                                    <td style="padding: 16px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <div style="width: 100%; height: 1px; background-color: #e2e8f0;"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="padding-left: 32px; padding-right: 32px; padding-top: 16px; padding-bottom: 40px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 8px;">
+                                            <strong>Hier noch einmal die Details zu Ihrer Buchung:</strong><br>
+                                            <strong>Veranstaltung: </strong>
+                                            {{sm.matchcode}}
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            <strong>Zeitraum:</strong> {{sm.zeitraum}}
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; padding-bottom: 16px;">
+                                            Sollten Sie künftig weitere Schulungen buchen, steht Ihnen ab sofort unser neues Buchungsportal mit erweiterten Möglichkeiten zur Verfügung. 
+                                        </p>
+                                        <p style="font-size: 16px; color: #00aeef; margin: 0; padding: 0; padding-bottom: 16px; font-weight: 600;">
+                                            👉 <a href="https://app.seminarmanagercloud.de/ribeka-gmbh-bornheim/buchungsportal/suche/seminare?suchbegriff=&beginn=&ende=&ueberspringe=0" target="_blank" style="color: #00aeef; text-decoration: none;">Hier gelangen Sie direkt zum Portal</a>
+                                        </p>
+                                        <p style="font-size: 16px; color: #00aeef; margin: 0; padding: 0; padding-bottom: 16px; font-weight: 600;">
+                                            👉 <a href="https://app.seminarmanagercloud.de/_/auth/registrieren?redirectUri=%2Fribeka-gmbh-bornheim%2Fbuchungsportal%2Fsuche%2Fseminare%3Fsuchbegriff%3D%26beginn%3D%26ende%3D%26ueberspringe%3D0&mandantKennung=ribeka-gmbh-bornheim" target="_blank" style="color: #00aeef; text-decoration: none;">Hier gelangen Sie zum Portal um Ihre Buchungen einzusehen</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Trennlinie -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 0 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <div style="width: 100%; height: 1px; background-color: #e2e8f0;"></div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Inhalt: Online-Besprechungslinks und Hinweise -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td style="padding: 0px 32px; padding-bottom: 50px; padding-top: 20px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">                                        
+                                        <p><a href="{{sm.teamsUrl}}" target="_blank" style="font-size: 16px; color: #00aeef; margin: 0; padding: 0; padding-bottom: 16px; font-weight: 600; text-decoration: none;">Klicken Sie hier, um an Ihrem gebuchten Meeting der ribeka-Veranstaltung teilzunehmen.</a></p>{{sm.teamsUrl}:collapseEmpty}                                        
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; padding-bottom: 16px;">
+                                            {{port.anmeldebestaetigungHinweise}:html}
+                                        </p>
+                                        <p style="font-size: 16px; color: #475569; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif;">
+                                            {{port.erweiterteAnmeldebestaetigung}:html}
+                                        </p>{{port.erweiterteAnmeldebestaetigung}:collapseEmpty}
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Call to Action Button -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                <tr>
+                                    <td align="center" style="padding: 0px 32px 40px 32px; font-family: 'Inter', Arial, sans-serif; mso-line-height-rule: exactly; line-height: 1.6;">
+                                        <a href="{{sm.url}}" style="display: inline-block; padding: 16px 32px; font-size: 18px; font-weight: 700; color: #ffffff; background-color: #00aeef; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 12px rgba(0, 174, 239, 0.2);">
+                                            Zur Veranstaltungsübersicht
+                                        </a>
                                     </td>
                                 </tr>
                             </table>
